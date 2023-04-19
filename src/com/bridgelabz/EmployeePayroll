@@ -123,3 +123,45 @@ SQL QUERY: alter table employee_payroll add basic_pay int after salary;
             );
 
   ER DIAGRAM: updatedemployeepayroll.png
+
+
+
+#UC12: Ensure all retrieve queries done especially in UC 4, UC 5 and UC 7 are working with new table structure
+SQL QUEUE: //UC4
+           select * from employee_payroll;
+
+           insert into employee_department(employee_id, department_id, department) values
+           ("1", "333", "devops"),
+           ("2", "555", "full-stack-developer"),
+           ("3", "888", "production"),
+           ("4", "777", ".net developer"),
+           ("5", "555", "full-stack-developer"),
+           ("6", "111", "sales and marketing");
+
+           select * from employee_department;
+
+           //UC5
+           select * from employee_payroll
+           where name = "Simon";
+
+           select * from employee_payroll
+           where start between cast('2022-08-01' as date)  and date(now());
+
+           //UC7
+           select sum(salary) from employee_payroll
+           where gender = "Male" group by gender;
+
+           select avg(salary) from employee_payroll
+           where gender = "Male" group by gender;
+
+           select min(salary) from employee_payroll
+           where gender = "Male" group by gender;
+
+           select max(salary) from employee_payroll
+           where gender = "Male" group by gender;
+
+           select count(id) from employee_payroll
+           where gender = "Male" group by gender;
+
+           select count(id) from employee_payroll
+           where gender = "Female" group by gender;
