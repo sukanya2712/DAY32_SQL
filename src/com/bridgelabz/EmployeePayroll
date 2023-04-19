@@ -5,3 +5,12 @@ SQL QUERY: create database payroll_service;
            08:31:35	create database payroll_service	1 row(s) affected	0.328 sec
 
 
+#UC2: Ability to create a employee payroll table in the payroll service database to manage employee payrolls
+SQL QUERY: create table employee_payroll(
+           id int not null auto_increment,
+           name varchar(30) not null ,
+           salary double not null,
+           start date not null,
+           primary key(id)
+           );
+
