@@ -110,3 +110,7 @@ SQL QUERY: alter table employee_payroll add basic_pay int after salary;
            where id = 5;
 
            select * from employee_payroll;
+
+
+#UC10: ER DIAGRAM
+        employeepayroll.png
