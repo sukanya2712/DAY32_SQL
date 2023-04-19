@@ -30,3 +30,10 @@ id	|name     |salary    |start
 2	|Stanley  |8000000   |2022-09-11
 3	|Athul    |7000000   |2022-09-13
 4	|Simon    |6000000   |2022-07-21
+
+#UC5: Ability to retrieve salary data for a particular employee as well as all employees who have joined in a particular data range from the payroll service database
+SQL QUERY: select * from employee_payroll
+           where name = "Simon";
+
+           select * from employee_payroll
+           where start between cast('2022-08-01' as date)  and date(now());
