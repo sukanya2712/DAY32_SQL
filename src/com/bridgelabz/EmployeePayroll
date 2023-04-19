@@ -37,3 +37,19 @@ SQL QUERY: select * from employee_payroll
 
            select * from employee_payroll
            where start between cast('2022-08-01' as date)  and date(now());
+
+#UC6: Ability to add Gender to Employee Payroll Table and Update the Rows to reflect the correct Employee Gender
+SQL QUERY: insert into employee_payroll(name,salary,start) values
+           ("Deepthi",5000000.0,'2022-01-12');
+
+           alter table employee_payroll add gender varchar(10) after name;
+
+           update employee_payroll
+           set gender = "Male"
+           where id < 5;
+
+           update employee_payroll
+           set gender = "Female"
+           where id = 5;
+
+           select * from employee_payroll;
