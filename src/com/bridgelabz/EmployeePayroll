@@ -114,3 +114,12 @@ SQL QUERY: alter table employee_payroll add basic_pay int after salary;
 
 #UC10: ER DIAGRAM
         employeepayroll.png
+
+ #UC11: Implement the ER Diagram into Payroll Service DB
+ SQL QUERY: create table employee_department(
+            employee_id int not null,
+            department_id int,
+            department varchar(50)
+            );
+
+  ER DIAGRAM: updatedemployeepayroll.png
